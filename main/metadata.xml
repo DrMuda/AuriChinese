@@ -8,7 +8,7 @@
     大部分汉化文本取自 @汐何 原来的文本， 补充新增道具和有改动道具的文本
     代码则是从Auri mod的代码中分离出来的
 	</description>
-    <version>1.5</version>
+    <version>1.6</version>
     <visibility>Public</visibility>
     <tag id="Lua"/>
     <tag id="Items"/>
