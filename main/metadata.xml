@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+    <name>auri chinese</name>
+    <directory>auri chinese</directory>
+    <id>2915113498</id>
+    <description>[url= https://steamcommunity.com/sharedfiles/filedetails/?id=2283703372]Auri[/url]的汉化mod
+目前只实现了EID汉化
+大部分汉化文本取自 @汐何 原来的文本， 补充新增道具和有改动道具的文本
+代码则是从Auri mod的代码中分离出来的
+解锁人物的贴图需要手动把本mod的 resources 文件夹覆盖到 Auri 的 resources 文件夹， 暂时无法通过代码实现替换贴图
+	</description>
+    <version>1.4</version>
+    <visibility>Public</visibility>
+    <tag id="Lua"/>
+    <tag id="Items"/>
+    <tag id="Active Items"/>
+    <tag id="Trinkets"/>
+</metadata>
