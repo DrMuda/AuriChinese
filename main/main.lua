@@ -1,6 +1,6 @@
 local AuriChinese = RegisterMod("Auri Chinese", 1)
 
-print("Auri mod EID load!")
+print("Auri Chinese mod EID load!")
 if EID and AuriMod then
   local Auriz = Aurimod
   EID:setModIndicatorName("Little Auri")
@@ -92,7 +92,7 @@ if EID and AuriMod then
     "当只剩半颗心或一颗骨心或一颗腐心时：#\1 伤害 *1.5#↑ 伤害 +3#\1 攻击间隔 / 1.5#{{ColorRainbow}}\1 (Milcah 则为2.5)#随机眼泪效果",
     "濒死", "zh_cn")
   EID:addCollectible(COLLECTIBLE_GOLDEN_PINK_HOURGLASS,
-    "回溯时间。#如果下一个房间有道具，将重置它们。#如果房间有敌人，将降低它们的等级。#{{ColorRed}}在当前楼层使用 3 次后有 50% 几率破碎#{{ColorGreen}}如果未破碎，将在新楼层重置",
+    "回溯时间。#使用后进入的下一个房间如果有道具，将重置它们。#使用后进入的下一个房间如果有敌人，将降低它们的等级。#{{ColorRed}}在当前楼层使用 3 次后有 50% 几率破碎#{{ColorGreen}}如果未破碎，将在新楼层重置",
     "金色墨水沙漏", "zh_cn")
   EID:addCollectible(COLLECTIBLE_SEDUCE,
     "使房间内的所有敌人迷惑#有机会永久迷惑敌人#永久迷惑的敌人会在房间之间跟随角色#{{ColorRainbow}}+5% 几率使 Naamah 发射心形眼泪",
@@ -118,7 +118,7 @@ if EID and AuriMod then
   EID:assignTransformation("collectible", COLLECTIBLE_PRINCESS_BABY, EID.TRANSFORMATION["CONJOINED"])
 
   EID:addCollectible(COLLECTIBLE_ENERGY_SHIELD,
-    "当满充能时，可以抵消伤害#抵消伤害或使用时，对附件敌人造成伤害", "能量护盾",
+    "当满充能时，可以抵消一次伤害(对献血机等自伤行为有效)#抵消伤害或使用时，对附近敌人造成伤害", "能量护盾",
     "zh_cn")
   EID:addCollectible(COLLECTIBLE_MAGE_STAFF,
     "{{Luck}} {{ColorGreen}}幸运 x 2 #{{ArrowUp}} +0.2 射速#{{ArrowUp}} +0.5 伤害#{{ArrowUp}} +1.25 射程#{{ArrowDown}} -0.2 弹速",
@@ -136,8 +136,8 @@ if EID and AuriMod then
   EID:assignTransformation("collectible", COLLECTIBLE_LITTLE_PYROMANCER, EID.TRANSFORMATION["CONJOINED"])
 
   EID:addCollectible(COLLECTIBLE_POCKET_BAG,
-    "如果仍持有初始主动道具，设置该道具到口袋槽(不懂啥意思)#如果仍持有初始饰品，吞掉该饰品",
-    "口袋包", "zh_cn")
+    "如果仍持有初始主动道具，设置该道具到副手主动槽#如果仍持有初始饰品，吞掉该饰品",
+    "提包", "zh_cn")
   EID:addCollectible(COLLECTIBLE_WITCHS_SOUP,
     "↑ {{Luck}} +30 幸运#提升的幸运会逐渐下降#捡到时扭曲屏幕", "女巫的汤", "zh_cn")
   EID:addTrinket(TrinketType.TRINKET_MILCAHS_FAITH,
@@ -147,14 +147,14 @@ if EID and AuriMod then
     "易碎硬币", "zh_cn")
   EID:addTrinket(TrinketType.TRINKET_HANSENS_PENNY,
     "捡到硬币时有 20% 几率获得麻风环绕物#最多可以生成 3 个", "HANSENS硬币", "zh_cn")
-  EID:addTrinket(TrinketType.TRINKET_TECH_PENNY, "捡到硬币时生成激光环", "科技硬币", "zh_cn")
+  EID:addTrinket(TrinketType.TRINKET_TECH_PENNY, "捡到硬币时生成科技X光环", "科技硬币", "zh_cn")
   EID:addTrinket(TrinketType.TRINKET_MODED_CARTRIDGE,
     "进入新房间时，赋予 10% 基础几率触发掌机游戏效果#在掌机游戏效果下获得 +0.5 速度",
     "mod卡带", "zh_cn")
   EID:addTrinket(TrinketType.TRINKET_NECRO_PENNY, "捡到硬币时有 15% 几率召唤一个友好的骨头小鬼",
     "亡灵硬币", "zh_cn")
   EID:addTrinket(TrinketType.TRINKET_POWER_PELLETS,
-    "当进入新房间时，此饰品会在房间内随机位置掉落#捡到后触发掌机游戏效果",
+    "当进入新房间时，此饰品会在房间内随机位置掉落#捡到后触发掌机游戏效果(仅当有敌人时触发)",
     "力量胶囊", "zh_cn")
   EID:addTrinket(TrinketType.TRINKET_POOPPY_PENNY, "捡到硬币时有 25% 几率生成友好的便便", "便便硬币",
     "zh_cn")
